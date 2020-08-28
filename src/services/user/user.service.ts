@@ -11,7 +11,9 @@ export class UserService {
 
     // Get Particular
     async findOne(username) {
-        return await this.userModel.findOne({ username });
+        console.log('username: ', username);
+        return await this.userModel.findOne({where: { username: username }});
+        // return await this.userModel.find({ username: username });
     }
 
     // Create 

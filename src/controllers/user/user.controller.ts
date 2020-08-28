@@ -20,6 +20,7 @@ export class UserController {
 
     @MessagePattern({ role: 'user', cmd: 'get login' })
     getUser(data: any) {
+        console.log('data: ', data);
       return this.userService.findOne({ username: data.username });
     }
 
