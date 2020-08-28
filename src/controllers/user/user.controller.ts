@@ -32,7 +32,7 @@ export class UserController {
     }
 
     // Read All
-    @UseGuards(AuthGuard)
+    // @UseGuards(AuthGuard)
     @Get('all')
     async GetAll() {
         // throw new ForbiddenException();
